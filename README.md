@@ -1,11 +1,13 @@
 # IPSweeper
-A simple bash script to scan a /24 network.
+**A simple bash script to scan a network.**
 
-Synax:
-./ipsweep <first 24 bits here // e.g: 192.168.0>
+**Synax:**
+- ***Scans:***
+	- `./ipsweep <first 24 bits here // e.g: 192.168.0>` ## just a scan
+	- `./ipsweep <first 24 bits here> > ip.txt`  ##output to ip.txt in pwd
 
-If you want to store the results then syntax = ./ipsweep <first 24 bits here> > ip.txt
-
-If you want to then use nmap to scan from the results then syntax = for ip in $(cat ip.txt); do nmap $ip; done
+**Note:**
+If you want to then use nmap to scan from the results, then use the following Syntax below:
+`for ip in $(cat ip.txt); do nmap $ip; done`
 
 Enjoy.
